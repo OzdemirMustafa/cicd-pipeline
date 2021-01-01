@@ -9,7 +9,7 @@ services:
 before_script: pip install docker-compose
 
 script:
-    - echo "Hi there, this is Mustafa here!"
+    - echo "Hi there, this is Mustafa here 2!"
 
 deploy:
     provider: script
