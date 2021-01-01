@@ -1,0 +1,19 @@
+
+language: python
+sudo: true
+python:
+    - "3.9"
+
+services:
+    - docker
+
+before_script: pip install docker-compose
+
+script:
+    - echo "Hi there"
+
+deploy:
+    provider: script
+    script: bash scripts/deploy.sh
+    on:
+        branch: master
