@@ -1,6 +1,5 @@
-
 language: python
-sudo: true
+sudo: required
 python:
     - "3.9"
 
@@ -10,10 +9,10 @@ services:
 before_script: pip install docker-compose
 
 script:
-    - echo "Hi there"
+    - echo "Hi there, this is Mustafa here!"
 
 deploy:
     provider: script
-    script: bash scripts/deploy.sh
+    script: bash travis.deploy.sh
     on:
         branch: master
